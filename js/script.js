@@ -36,4 +36,8 @@ function TotalPrice (price, quantity, delivery,toppings,crust) {
     this.toppings=toppings;
     this.crust=crust;
 };
+TotalPrice.prototype.finalTotal = function () {
+    return ( this.price + this.delivery + this.toppings + this.crust )* this.quantity ;
+};
+
 
