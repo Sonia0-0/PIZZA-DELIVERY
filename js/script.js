@@ -63,7 +63,33 @@ $(document).ready(function(){
     var topNames = toppingsName[pizzaTop-1];
     var crustName = crustNames[priceCrust-1];
     newOrder = new Results(pizzaType,pizzaSize, crustName,topNames,crustName);
-    newTotal = new TotalPrice(price, pizzaQty, DeliveryCost,ToppingsCost,crustCost);
+    newTotal = new TotalPrice(price, pizzaQty, DeliveryCost,ToppingsCost,crustCost);   
+     if (pizzaPick===1){
+        alert( newOrder.order());
+        alert("Your bill is: " + newTotal.finalTotal());
+        alert("Thank you for shopping with us! " )
+        }else{
+            if(pizzaPick===2){
+               var location= prompt(" Where would your like your Pizza to be Delivered? ");
+               var locations =["nairobi", "ngong road", "ngong lane plaza", "cbd", "moringa"]
+               if((location !== locations[0]) && (location !== locations[1]) && (location !== locations[2]) && (location !== locations[3]) && (location !== locations[4]) && (location !== locations[5])){
+                alert("Choose a location listed below")
+                alert(locations)
+                
+            }
+            else  { 
+                prompt("Please enter your phone number to facilitate communication and faster delivery.")
+                alert("Your order has been received and it will be delivered to " + location + " An additional 200/= will be charged for delivery.");
+                alert(newOrder.order());
+                alert("Your bill is: " + newTotal.finalTotal());
+                alert("Thank you for shopping with us! Your Order will be arriving soon." )
+            }
+            }
+        }
+})
+});
+
+
 
 
 
