@@ -14,13 +14,12 @@ function validateForm() {
     }
     event.preventDefault();
   }
-
-  $(document).ready(function(){
+  
+$(document).ready(function(){
     $("#checky").click(function(){
         $("#myForm").toggle("5000")
     });
 });
-
 function Results (type,size,crust,toppings) {
     this.type = type;
     this.size= size;
@@ -30,7 +29,11 @@ function Results (type,size,crust,toppings) {
 Results.prototype.order = function() {
     return "You have made an order of " + this.type + " pizza  with " + this.toppings + " as toppings and " + this.crust + " for crust ."
 };
-
-
-
+function TotalPrice (price, quantity, delivery,toppings,crust) {
+    this.price= price;
+    this.quantity=quantity;
+    this.delivery=delivery;
+    this.toppings=toppings;
+    this.crust=crust;
+};
 
