@@ -21,4 +21,12 @@ function validateForm() {
     });
 });
 
+function Results (type,size,crust,toppings) {
+    this.type = type;
+    this.size= size;
+    this.crust= crust;
+    this.toppings=toppings;
+};
+
+
 
