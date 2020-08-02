@@ -14,3 +14,11 @@ function validateForm() {
     }
     event.preventDefault();
   }
+
+  $(document).ready(function(){
+    $("#checky").click(function(){
+        $("#myForm").toggle("5000")
+    });
+});
+
+
